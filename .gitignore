@@ -1,0 +1,8 @@
+#temp dev files
+/.vscode
+/__pycache__
+/node_modules
+/python
+
+#compiled code
+/dist

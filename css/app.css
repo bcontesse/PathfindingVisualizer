@@ -1,0 +1,208 @@
+.no-type {
+    border: 1px solid rgb(206, 171, 252);
+    background-color:white;
+}
+
+.no-type-visited {
+    border: 1px solid rgb(206, 171, 252);
+    background-color:rgb(66, 132, 207);
+}
+
+.no-type-shortest {
+    background-color:rgb(250, 19, 200);
+}
+
+.start {
+    background-color:rgb(255, 255, 255);
+    background-image: url('images/user.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.start-node {
+    border: 1px solid rgb(206, 171, 252);
+    background-color:rgb(255, 255, 255);
+    background-image: url('images/user.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.start-node-visited {
+    border: 1px solid rgb(206, 171, 252);
+    background-color:rgb(66, 132, 207);
+    background-image: url('images/user.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.start-node-shortest {
+    background-color:rgb(250, 19, 200);
+    background-image: url('images/user.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.goal {
+    background-color:rgb(255, 255, 255);
+    background-image: url('images/star.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.goal-node {
+    border: 1px solid rgb(206, 171, 252);
+    background-color:rgb(255, 255, 255);
+    background-image: url('images/star.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.goal-node-shortest {
+    background-color:rgb(250, 19, 200);
+    background-image: url('images/star.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.goal-node-visited {
+    border: 1px solid rgb(206, 171, 252);
+    background-color:rgb(66, 132, 207);
+    background-image: url('images/star.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wall-node {
+    background-color:rgb(117, 117, 117);
+}
+
+.gate {
+    background-color:rgb(255, 255, 255);
+    background-image: url('images/gate.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gate-node {
+    border: 1px solid rgb(206, 171, 252);
+    background-color:rgb(255, 255, 255);
+    background-image: url('images/gate.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gate-node-visited {
+    border: 1px solid rgb(206, 171, 252);
+    background-color:rgb(66, 132, 207);
+    background-image: url('images/gate.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gate-node-shortest {
+    background-color:rgb(250, 19, 200);
+    background-image: url('images/gate.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.turned-off {
+    color: rgb(231, 21, 21);
+    text-decoration: line-through;
+}
+
+.selected {
+    background-color:rgb(108, 197, 105);
+    /* color: rgb(4, 114, 0); */
+    /* text-decoration: underline; */
+}
+
+#algorithmDescriptor {
+    text-align: center;
+    color: #34495e;
+    padding: 15px 25px 15px 25px;
+}
+
+#board {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#board td {
+    width: 25px;
+    height: 25px;
+}
+
+#mainText div {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    position: relative;
+    top: 0.5em;
+    margin: 0 0.42em;
+}
+
+#mainText > ul li {
+    display: inline-block;
+    list-style: none;
+  }
+
+#tutorial {
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 1);
+    width: 80%;
+    height: 80%;
+    border: 2px solid #34495e;
+    border-radius: 4px;
+    text-align: center;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#tutorialText {
+    margin: auto;
+    width: 90%;
+}
+
+#getStartedButton {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 725px) {
+    #tutorial {
+        font-size: 13px;
+        width: 90%;
+        height: 95%;
+    }
+}
+
+@media (min-width: 1030px) {
+    #tutorial {
+        width: 70%;
+        height: 70%;
+    }
+}

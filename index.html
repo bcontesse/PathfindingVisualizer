@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pathfinding Visualizer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id='navbarDiv'>
+     <nav class="navbar">
+       <div class="container-fluid">
+         <div class="navbar-header">
+           <a id="refreshButton" class="navbar-brand" href="#">Pathfinding Visualizer</a>
+         </div>
+         <ul class="nav navbar-nav">
+           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Algorithms<span class="caret"></span></a>
+             <ul class="dropdown-menu">
+               <li id='startButtonDijkstra'><a href="#">Dijkstra's Algorithm</a></li>
+               <li id='startButtonAstar'><a href="#">A* Search</a></li>
+               <li id='startButtonGreedy'><a href="#">Greedy Best-first Search</a></li>
+               <li id='startButtonBFS'><a href="#">Breadth-first Search</a></li>
+               <li id='startButtonDFS'><a href="#">Depth-first Search</a></li>
+             </ul>
+           </li>
+           <!-- <li id='addBombButton'><a href="#">Add Bomb</a></li> -->
+           <li id='startButton'><button id="actualStartButton" class="btn btn-default navbar-btn" type="button">Visualize!</button></li>
+           <li id='createMazeButton'><a href="#">Create Maze</a></li>
+           <li id='clearBoardButton'><a href="#">Clear Board</a></li>
+           <li id='clearWallsButton'><a href="#">Clear Walls &amp; Gates</a></li>
+           <li id='clearPathButton'><a href="#">Clear Search &amp; Path</a></li>
+           <li class="dropdown">
+            <a id="adjustSpeed" class="dropdown-toggle" data-toggle="dropdown" href="#">Speed: Average<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li id='adjustFast'><a href="#">Fast</a></li>
+              <li id='adjustAverage'><a href="#">Average</a></li>
+              <li id='adjustSlow'><a href="#">Slow</a></li>
+            </ul>
+          </li>
+         </ul>
+       </div>
+     </nav>
+    </div>
+    <div id="tutorial">
+      <div id='tutorialText'>
+        <h3>Welcome to the Pathfinding Visualizer!</h3>
+        <p>If you feel confident that you understand what's going on, feel free to click the 'Get Started' button.</p>
+        <p>Clicking 'Algorithms' will show you all available algorithms to simulate.</p>
+        <p>BFS and DFS are unweighted searches, meaning that they do not consider the cost of making moves.</p>
+        <p>Dijkstra's, A-Star, and Greedy Best First Search are weighted searches, meaning they will take the cost of a path into account.</p>
+        <p>You can drag and drop the start and target nodes anywhere on the grid for the algorithms to figure out.</p>
+        <p>Clicking within the grid will cause walls to appear, which the algorithms will have to work around.</p>
+        <p>If you have a weighted algorithm selected, you may place gates by typing 'G' and clicking in the grid. These gates are weighted heavily, to simulate the cost of passing through. Walls can be selected by pressing 'G' again.</p>
+        <p>The speed of the simulation can be controlled from the 'Speed' dropdown. After an algorithm is completed, you can move the start or target nodes and the search as well as the shortest path will update live.</p>
+        <p>The 'Clear' buttons will remove specific components of the visualization if needed.</p>
+        <p>That's it! Good luck and get learning!</p>
+        <button id="getStartedButton" class="btn btn-default navbar-btn" type="button">Get Started</button>
+      </div>
+    </div>
+    <div id='mainGrid'>
+      <div id='mainText'>
+        <ul>
+          <li>
+            <div class="start"></div>Start Node</li>
+          <li>
+            <div class="goal"></div>Target Node</li>
+          <li id="gate-instruct">
+            <div class="gate"></div>Gate Node</li>
+          <li>
+            <div class="wall-node"></div>Wall Node</li>
+          <li>
+            <div class="no-type"></div>Unvisited Node</li>
+          <li>
+            <div class="no-type-visited"></div>Visited Node</li>
+          <li>
+            <div class="no-type-shortest"></div>Shortest-Path Node</li>
+        </ul>
+      </div>
+      <div id="algorithmDescriptor">Pick an algorithm and visualize it!</div>
+      <table id='board'></table>
+    </div>
+  </body>
+  <script type='module' src='src/index.js'></script>
+  <!-- <script src='dist/main.js'></script> -->
+</html>
