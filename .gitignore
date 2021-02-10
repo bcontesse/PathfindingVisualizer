@@ -3,6 +3,7 @@
 /__pycache__
 /node_modules
 /python
+debug.log
 
 #compiled code
 /dist

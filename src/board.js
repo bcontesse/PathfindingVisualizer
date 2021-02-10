@@ -152,7 +152,7 @@ export default class Board {
                 this.reset_search();
                 this.algo_done = false;
                 if (this.cur_algorithm === null) {
-                    document.getElementById('startButton').innerHTML = '<button class="btn btn-default navbar-btn" type="button">Pick an Algorithm!</button>';
+                    document.getElementById('startButton').innerHTML = '<button id="actualStartButton" class="btn btn-default navbar-btn" type="button">Pick an Algorithm!</button>';
                 } else {
                     let success = this.solve();
                     if (success) {
